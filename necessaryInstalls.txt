@@ -1,0 +1,4 @@
+zsh
+pandoc
+imagemagick-6.q16
+x11-apps
