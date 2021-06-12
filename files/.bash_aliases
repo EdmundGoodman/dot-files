@@ -16,6 +16,9 @@ alias l='ls -CF'
 #Alias to run an interactive Haskell shell via stack, to avoid multiple GHC installs, without loading any packages
 alias ghci='stack exec -- ghci'
 
+#Alias python3 as python for convenience
+alias python="python3"
+
 #Alias to run the command to open the virtual environment with all my python libraries in
 alias venvActivate="source /mnt/c/Users/egood/Desktop/projects/programming/env/bin/activate"
 
