@@ -19,9 +19,6 @@ alias ghci='stack exec -- ghci'
 #Alias python3 as python for convenience
 alias python="python3"
 
-#Alias to run the command to open the virtual environment with all my python libraries in
-alias venvActivate="source /mnt/c/Users/egood/Desktop/projects/programming/env/bin/activate"
-
 #Alias to show the weather
 alias weather="printf \"The weather in %s\"; curl wttr.in\?0nqF"
 #alias weather="ansiweather -l $(curl -s ipinfo.io/city) -a false | sed 's/^ //g'"
