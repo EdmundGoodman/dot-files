@@ -139,6 +139,5 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-#Move to the Windows machine desktop by default
+#Move to desktop by default
 desktop
-
