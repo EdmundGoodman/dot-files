@@ -1,0 +1,130 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    "window.title": "${rootName}${separator}${activeEditorMedium}$",
+    "breadcrumbs.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.showSlider": "always",
+
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "file-icons",
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono Regular",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": "enable",
+    "editor.rulers": [ 80 ],
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "remote.SSH.remotePlatform": {
+        "remote-27.dcs.warwick.ac.uk": "linux",
+        "kudu.dcs.warwick.ac.uk": "linux"
+    },
+
+    "languageTool.language": "en",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    "git.ignoreLegacyWarning": true,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.blame.line.enabled": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+
+
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "java.refactor.renameFromFileExplorer": "autoApply",
+    "sonarlint.rules": {
+        "python:S116": { "level": "off" },
+        "python:S117": { "level": "off" }
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.showStartPage": false,
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "ltex.additionalRules.motherTongue": "en-GB",
+
+    "trailing-spaces.highlightCurrentLine": false,
+
+    "haskell.hlint.executablePath": "/home/edjg/.local/bin/hlint",
+    "haskell.hlint.run": "onSave",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe",
+    "editor.linkedEditing": true,
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+    "[java]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.inlineSuggest.enable": false,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+
+}
