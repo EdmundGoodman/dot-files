@@ -10,6 +10,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Added by Toolbox App                                                                   
+export PATH="$PATH:/home/edjg/.local/share/JetBrains/Toolbox/scripts"
+
 # set MANPATH
 export MANPATH="/usr/local/man:$MANPATH"
 
