@@ -1,0 +1,25 @@
+[user]
+        email = egoodman3141@gmail.com
+        name = EdmundGoodman
+[alias]
+        tree = log --all --decorate --oneline --graph --date=short
+        # forcepull = "!git fetch --all && git reset --hard origin/main"
+        forcepush = push --force-with-lease
+        conflicts = "!f() { git diff -S \"<<<<<<< HEAD\" -S \"=======\" -S \">>>>>>> $(git name-rev --name-only MERGE_HEAD)\" HEAD; }; f"
+        diffv = difftool -t vimdiff
+[credential]
+        helper = store
+[difftool]
+        trustExitCode = true
+        prompt = false
+[pager]
+        branch = false
+[init]
+	defaultBranch = main
+
+#https://blog.martinfenner.org/posts/using-microsoft-word-with-git
+[diff "pandoc"]
+        textconv=pandoc --to=markdown
+        prompt = false
+[push]
+	autoSetupRemote = true
