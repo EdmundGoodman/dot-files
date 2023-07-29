@@ -1,0 +1,110 @@
+{
+    // ===================== //
+    // General configuration //
+    // ===================== //
+    "telemetry.telemetryLevel": "off",
+    // ============ //
+    // Editor style //
+    // ============ //
+    "window.title": "${rootName}${separator}${activeEditorMedium}$",
+    "breadcrumbs.enabled": false,
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "editor.fontFamily": "Fira Code",
+    "editor.minimap.showSlider": "always",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": "enable",
+    "editor.rulers": [
+        80
+    ],
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Pro",
+    // ================ //
+    // Editor behaviour //
+    // ================ //
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.suggestSelection": "first",
+    "editor.inlineSuggest.enabled": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "explorer.confirmDragAndDrop": true,
+    // https://www.roboleary.net/vscode/2020/08/05/dont-need-extensions.html
+    "editor.linkedEditing": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "html.autoClosingTags": true,
+    "javascript.autoClosingTags": true,
+    "typescript.autoClosingTags": true,
+    // =============================== //
+    // Language-specific configuration //
+    // =============================== //
+    "python.defaultInterpreterPath": "/usr/bin/python",
+    "python.analysis.typeCheckingMode": "strict",
+    "python.linting.enabled": false, // Instead, rely on Pylance and CLI tools
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "isort.args": [
+        "--profile black"
+    ],
+    "rust-analyzer.lens.enable": false,
+    "haskell.hlint.run": "onSave",
+    // ======================== //
+    // Formatting configuration //
+    // ======================== //
+    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+    },
+    "[javascript][javascriptreact][typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json][jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[css][scss][less]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    // ======================= //
+    // Extension configuration //
+    // ======================= //
+    "remote.SSH.remotePlatform": {
+        "remote-27.dcs.warwick.ac.uk": "linux"
+    },
+    "yaml.schemas": {
+        "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+    },
+    "yaml.customTags": [
+        "tag:yaml.org,2002:python/name:materialx.emoji.to_svg",
+        "tag:yaml.org,2002:python/name:materialx.emoji.twemoji",
+    ],
+    "sonarlint.rules": {
+        "python:S116": {
+            "level": "off"
+        },
+        "python:S117": {
+            "level": "off"
+        }
+    },
+    "sonarlint.disableTelemetry": true,
+    "cSpell.language": "en-GB",
+    "ltex.language": "en-GB",
+}
