@@ -10,9 +10,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Added by Toolbox App                                                                   
-export PATH="$PATH:/home/edjg/.local/share/JetBrains/Toolbox/scripts"
-
 # set MANPATH
 export MANPATH="/usr/local/man:$MANPATH"
 
@@ -24,4 +21,7 @@ eval "$(pyenv init -)"
 
 # set up rust
 . "$HOME/.cargo/env"
+
+# set up JetBrains IDEs
+export PATH="$PATH:/home/edjg/.local/share/JetBrains/Toolbox/scripts"
 
