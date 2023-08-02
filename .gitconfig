@@ -1,25 +1,38 @@
 [user]
-        email = egoodman3141@gmail.com
-        name = EdmundGoodman
+    email = egoodman3141@gmail.com
+    name = EdmundGoodman
 [alias]
-        tree = log --all --decorate --oneline --graph --date=short
-        # forcepull = "!git fetch --all && git reset --hard origin/main"
-        forcepush = push --force-with-lease
-        conflicts = "!f() { git diff -S \"<<<<<<< HEAD\" -S \"=======\" -S \">>>>>>> $(git name-rev --name-only MERGE_HEAD)\" HEAD; }; f"
-        diffv = difftool -t vimdiff
+    tree = log --all --decorate --oneline --graph --date=short
+    # forcepull = "!git fetch --all && git reset --hard origin/main"
+    forcepush = push --force-with-lease
+    conflicts = "!f() { git diff -S \"<<<<<<< HEAD\" -S \"=======\" -S \">>>>>>> $(git name-rev --name-only MERGE_HEAD)\" HEAD; }; f"
+    diffv = difftool -t vimdiff
 [credential]
-        helper = store
+    helper = store
 [difftool]
-        trustExitCode = true
-        prompt = false
+    trustExitCode = true
+	prompt = false
 [pager]
-        branch = false
+    branch = false
 [init]
 	defaultBranch = main
 
 #https://blog.martinfenner.org/posts/using-microsoft-word-with-git
 [diff "pandoc"]
-        textconv=pandoc --to=markdown
-        prompt = false
+    textconv=pandoc --to=markdown
+    prompt = false
 [push]
 	autoSetupRemote = true
+
+# https://nbdime.readthedocs.io/en/latest/
+[diff "jupyternotebook"]
+	command = git-nbdiffdriver diff
+[merge "jupyternotebook"]
+	driver = git-nbmergedriver merge %O %A %B %L %P
+	name = jupyter notebook merge driver
+[difftool "nbdime"]
+	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+[mergetool "nbdime"]
+	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	prompt = false
