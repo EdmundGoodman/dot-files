@@ -9,6 +9,8 @@
     diffv = difftool -t vimdiff
 [credential]
     helper = store
+#[credential]
+#	credentialStore = secretservice
 [difftool]
     trustExitCode = true
 	prompt = false
