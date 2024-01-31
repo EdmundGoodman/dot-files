@@ -46,6 +46,6 @@ noremap <expr> <C-S> &diff ? ':wqa!<cr>' : ''
 noremap <expr> <C-Q> &diff ? ':cq!<cr>' : ''
 au VimEnter * if &diff | execute 'windo set wrap' | endif
 
-" Set the colour scheem
+" Set the colour scheme
 colorscheme monokai
 
