@@ -40,6 +40,10 @@ alias cpwd='cpwd '
 # Show a photo from the webcam in the terminal
 alias webcam="if [ -e '/dev/video0' ]; then; ffmpeg -y -f video4linux2 -i /dev/video0 -ss 0:0:1 -vframes 1 /tmp/webcam.jpg 2>/dev/null && icat /tmp/webcam.jpg && rm /tmp/webcam.jpg; else; echo 'No webcam connected!' >&2 ; fi"
 
-#Alias xournalpp
-# alias xournal="xournalpp"
+# Alias xournalpp
+alias xournal="xournalpp"
 
+# Helpful tmux commands
+alias tms='tmux new -As0'
+alias tmd='tmux detach'
+alias tmls='tmux ls'
