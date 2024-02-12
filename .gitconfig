@@ -3,10 +3,12 @@
     name = EdmundGoodman
 [alias]
     tree = log --all --decorate --oneline --graph --date=short
-    # forcepull = "!git fetch --all && git reset --hard origin/main"
-    forcepush = push --force-with-lease
-    conflicts = "!f() { git diff -S \"<<<<<<< HEAD\" -S \"=======\" -S \">>>>>>> $(git name-rev --name-only MERGE_HEAD)\" HEAD; }; f"
     diffv = difftool -t vimdiff
+    forcepush = push --force-with-lease
+    # forcepull = "!git fetch --all && git reset --hard origin/main"
+    conflicts = "!f() { git diff -S \"<<<<<<< HEAD\" -S \"=======\" -S \">>>>>>> $(git name-rev --name-only MERGE_HEAD)\" HEAD; }; f"
+    # https://codewithhugo.com/change-the-date-of-a-git-commit/
+    redate = "!f() { GIT_COMMITTER_DATE=\"$(date)\" git commit --amend --no-edit --date \"$(date)\"; }; f"
 [credential]
     helper = store
 #[credential]
